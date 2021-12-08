@@ -170,7 +170,7 @@ ul.row {
     clear: both;
 }
 
-[class^="col-"] {
+.col [class^="col-"] {
     float: left;
     padding: 0.05rem;
 }
