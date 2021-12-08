@@ -54,8 +54,8 @@
 [data-section-theme="dark"] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
-    --button-color: var(--color-white);
     background-color: var(--color-black);
+    --button-color: var(--color-white);
 }
 
 *, *::before, *::after {
@@ -110,7 +110,6 @@ a:active {
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
     background: var(--button-hover-background);
-
 }
 
 .visually-hidden {
