@@ -1,0 +1,14 @@
+/* nests */
+$num: 10px;
+@mixin mixer($num) {
+    margin-left: $num;
+    margin-right: $num;
+}
+
+body {
+    @include mixer($num);
+}
+
+div {
+    @include mixer($num + 5); 
+}
