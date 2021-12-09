@@ -1,0 +1,6 @@
+/* loops */
+@for $numnums from 1 through 5 {
+    h#{$numnums} {
+        font-size: #{$numnums}px;
+    }
+}
