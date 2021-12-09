@@ -1,0 +1,6 @@
+/* loops */
+@for $numnums from 1 through 4 {
+    .col-#{$numnums} {
+        width: (100% / $numnums);
+    }
+}
