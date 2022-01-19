@@ -17,6 +17,4 @@
    return students;
  }
 
- function classRoom() {
-  createClassRoom(10);
-}
+var classRoom = createClassRoom(10);
