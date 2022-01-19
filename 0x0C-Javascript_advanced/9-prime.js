@@ -18,12 +18,9 @@ function isPrime(num) {
   return num > 1;
 }
 
-let start = performance.now();
+var startTime = performance.now();
 const primeTotal = countPrimeNumbers();
-let end = performance.now();
-console.log("Execution time of printing countPrimeNumbers was", end - start, "milliseconds.");
-/**
- *   start.toFixed(7);
- *   console.log(start, end, primeTotal);
- * 
- */
+var endTime = performance.now();
+var time = endTime - startTime;
+console.log("Execution time of printing countPrimeNumbers was", time, "milliseconds.");
+
