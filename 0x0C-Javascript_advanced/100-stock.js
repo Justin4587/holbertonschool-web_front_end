@@ -1,12 +1,12 @@
 
 
-let stock = {
+var stock = {
   macbook: 2,
   iphone: 4,
 }
 
 function processPayment(itemName) {
-  this[itemName] -= 1;
+  stock[itemName] -= 1;
   console.log("Payment is being processed for item", itemName);
 }
 
@@ -17,11 +17,19 @@ function processError(itemName) {
 
 function processOrder(itemName, callbackPayment, callbackError) {
   console.log("Verifying the stock of ", itemName);
-  if (this[itemName] > 0) {
-    callbackPayment(itemName)    
+  if (stock[itemName] > 0) {
+    callbackPayment(itemName);    
   } else {
-    callbackError(itemName)
+    callbackError(itemName);
   }
 }
 
-var item = (prompt("Please enter the item you would like to purchase (Macbook, Iphone)")).toLowerCase()
+
+var userItem; 
+
+while (userItem !== "close") {
+    userItem = prompt("Please enter the item you would like to purchase (Macbook, Iphone)");
+    processOrder(userItem, processPayment, processError);
+  }
+
+
