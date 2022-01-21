@@ -6,9 +6,17 @@
         <meta charset="utf-8" />
         <title>Task 0</title>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    </head>
+
+    
+
+    <body id="body" >
+        <h1>Some content</h1>
+
         <script type="application/javaScript">
-          window.onload = () => {
-            if (window.jQuery) {
+          document.body.onload = () => {
+            if ($("#body").jQuery) {
               console.log("JQuery has been loaded correctly");
             }
             else {
@@ -16,12 +24,6 @@
             }
           }
         </script>
-
-
-    </head>
-
-    <body>
-
     </body>
 
 </html>
