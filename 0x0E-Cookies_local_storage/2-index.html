@@ -4,7 +4,8 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Task 0</title>    
+        <title>Task 0</title>
+         
 
     </head>
     <body>
@@ -23,18 +24,30 @@
 
           document.cookie = `firstname=${fname};max-age=864000`;
           document.cookie = `email=${email};max-age=864000`;
-          document.cookie = `path=/`;
         }
 
         function showCookies () {
-          const CookieMonster = document.cookie;
-          const actualCookies = document.querySelector(".cookies");
+          
           const paragraph = document.createElement("p");
-          paragraph.textContent = `Cookies: ${document.cookie}`;
+          paragraph.textContent = `Email: ${getCookie("email")} - Firstname: ${getCookie("firstname")}`;
           document.querySelector('body').appendChild(paragraph);
         }
 
-      </script>
+        function getCookie (name) {
+          let splitCookies = document.cookie.split(";");
+          
+          console.log(splitCookies);
+          for (let i of splitCookies) {
+            let cook_ies = i.split("=");
+            if (cook_ies[1] === name) {
+              console.log(cook_ies)
+              return cook_ies[1];
+            }
+          }
+          return '';
+        }
+
+      </script>    
 
     </body>
     
